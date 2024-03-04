@@ -9,8 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./comment-form.component.scss'],
 })
 export class CommentFormComponent {
-  @Input() name = "Write Your Name : ";
-  @Input() placeholder = 'Write something! whatever ypu want!';
+  @Input() name = "Hello! Write Your Name : ";
+  @Input() placeholder = "Write something! whatever you want!";
   @Input() buttonText = 'Create';
   @Output() formSubmitted = new EventEmitter<{
     text: string;
@@ -33,3 +33,4 @@ export class CommentFormComponent {
     });
   }
 }
+
