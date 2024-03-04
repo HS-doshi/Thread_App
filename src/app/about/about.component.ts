@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -10,4 +11,8 @@ import { CommonModule } from '@angular/common';
 })
 export class AboutComponent {
 
+  constructor(private router : Router){}
+  onHome(){
+    this.router.navigate(['home'])
+  }
 }

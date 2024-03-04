@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { UserService } from './services/user.service';
 
 @Component({
@@ -13,7 +13,7 @@ import { UserService } from './services/user.service';
 export class AppComponent {
   title = 'threads-app';
   userService = inject(UserService);
-  constructor() {
+  constructor(private router : Router) {
     const user = this.userService.getUserFromStorage();
     if (!user) {
       const randomNumber = Math.ceil(Math.random() * 4000 + 1000);
@@ -24,4 +24,8 @@ export class AppComponent {
       });
     }
   }
+  onHome(){
+    this.router.navigate(['home'])
+  }
 }
+

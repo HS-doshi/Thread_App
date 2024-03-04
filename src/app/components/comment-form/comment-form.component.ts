@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class CommentFormComponent {
   @Input() name = "Hello! Write Your Name : ";
-  @Input() placeholder = "Write something! whatever you want!";
+  @Input() placeholder = "Write something! whatever you want! It'll save your message!";
   @Input() buttonText = 'Create';
   @Output() formSubmitted = new EventEmitter<{
     text: string;
